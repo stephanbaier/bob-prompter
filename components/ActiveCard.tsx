@@ -99,13 +99,15 @@ export default function ActiveCard({ section, index, prevTitle, nextTitle }: Pro
         </ol>
       )}
 
-      {/* Julia reads — conversational block */}
+      {/* Julia reads — conversational block (large, primary reading text) */}
       {section.juliaScript && (
         <div className="mt-5 rounded-lg border-l-4 border-pink-400 bg-pink-50/60 px-5 py-4">
           <div className="text-[11px] font-semibold uppercase tracking-wider text-pink-700">
             Julia liest
           </div>
-          <p className="mt-1 text-lg leading-relaxed text-stone-900">{section.juliaScript}</p>
+          <p className="mt-1.5 text-xl leading-relaxed text-stone-900 md:text-[22px]">
+            {section.juliaScript}
+          </p>
         </div>
       )}
 
@@ -123,7 +125,9 @@ export default function ActiveCard({ section, index, prevTitle, nextTitle }: Pro
           <div className="text-[11px] font-semibold uppercase tracking-wider text-blue-700">
             Stephan — These
           </div>
-          <p className="mt-1 text-lg font-medium leading-relaxed text-stone-900">{section.thesis}</p>
+          <p className="mt-1.5 text-xl font-medium leading-relaxed text-stone-900 md:text-[22px]">
+            {section.thesis}
+          </p>
         </div>
       )}
 
@@ -146,10 +150,10 @@ export default function ActiveCard({ section, index, prevTitle, nextTitle }: Pro
 
       {/* Compact bullet list */}
       {section.bullets && section.bullets.length > 0 && (
-        <ul className="mt-5 space-y-2">
+        <ul className="mt-5 space-y-2.5">
           {section.bullets.map((bullet, i) => (
-            <li key={i} className="flex gap-3 text-base leading-snug text-stone-800">
-              <span className="mt-1.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+            <li key={i} className="flex gap-3 text-lg leading-snug text-stone-800">
+              <span className="mt-2 inline-block h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
               <span>{bullet}</span>
             </li>
           ))}

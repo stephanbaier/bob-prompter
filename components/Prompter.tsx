@@ -20,6 +20,8 @@ const LLM_INTERVAL_MS = 20_000;
 const LLM_OVERRIDE_THRESHOLD = 0.75;
 const LLM_MIN_WORDS = 20;
 
+const HINT_DISMISSED_KEY = "bob-prompter:hint-dismissed";
+
 export default function Prompter({ episode }: Props) {
   const sections = episode.sections;
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,11 +29,27 @@ export default function Prompter({ episode }: Props) {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [mounted, setMounted] = useState(false);
   const [debugOpen, setDebugOpen] = useState(false);
+  const [hintDismissed, setHintDismissed] = useState(true);
   const [llmDebug, setLlmDebug] = useState<LlmDebugInfo>({ lastCallAt: null, lastResult: null });
 
   useEffect(() => {
     setMounted(true);
+    try {
+      const stored = window.localStorage.getItem(HINT_DISMISSED_KEY);
+      setHintDismissed(stored === "1");
+    } catch {
+      setHintDismissed(false);
+    }
   }, []);
+
+  const dismissHint = () => {
+    setHintDismissed(true);
+    try {
+      window.localStorage.setItem(HINT_DISMISSED_KEY, "1");
+    } catch {
+      // ignore
+    }
+  };
 
   const matcherRef = useRef<{
     pushTranscript: (text: string, kind: "interim" | "final") => void;
@@ -208,13 +226,27 @@ export default function Prompter({ episode }: Props) {
             Speech Recognition wird in diesem Browser nicht unterstützt. Bitte Chrome oder Edge nutzen.
           </div>
         )}
-        {mounted && state === "idle" && isSupported && (
-          <div className="mb-4 rounded-md border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700">
-            👋 <strong>Navigation:</strong>{" "}
-            <kbd>←</kbd> / <kbd>→</kbd> wechselt Section ·{" "}
-            <kbd>↑</kbd> / <kbd>↓</kbd> scrollt die Seite ·{" "}
-            <kbd>Space</kbd> toggelt Auto-Follow ·{" "}
-            <kbd>D</kbd> öffnet Debug. Mic-Auto-Follow optional: Klick auf <strong>„▸ Start"</strong>.
+        {mounted && state === "idle" && isSupported && !hintDismissed && (
+          <div className="mb-4 flex items-start gap-3 rounded-md border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700">
+            <span className="flex-1">
+              👋 <strong>Navigation:</strong>{" "}
+              <kbd>←</kbd> / <kbd>→</kbd> wechselt Section ·{" "}
+              <kbd>↑</kbd> / <kbd>↓</kbd> scrollt die Seite ·{" "}
+              <kbd>Space</kbd> toggelt Auto-Follow ·{" "}
+              <kbd>D</kbd> öffnet Debug. Mic-Auto-Follow optional: Klick auf{" "}
+              <strong>„▸ Start"</strong>.
+            </span>
+            <button
+              type="button"
+              onClick={dismissHint}
+              aria-label="Hinweis schließen"
+              className="flex-shrink-0 rounded p-0.5 text-stone-400 hover:bg-stone-100 hover:text-stone-700"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
           </div>
         )}
 
