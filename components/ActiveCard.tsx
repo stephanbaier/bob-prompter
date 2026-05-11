@@ -23,10 +23,6 @@ type Props = {
 };
 
 export default function ActiveCard({ section, index, prevTitle, nextTitle, readMode }: Props) {
-  // Stickiness offset: in normal mode, the ControlBar (~57px) + Timeline (~58px) take ~115px.
-  // In read mode, no chrome above → top-0.
-  const stickyOffset = readMode ? "top-0" : "top-[115px]";
-
   const showStats = section.stats && section.stats.length > 0;
   const showBullets = section.bullets && section.bullets.length > 0;
   const showJulia = !!section.juliaScript;
@@ -45,10 +41,7 @@ export default function ActiveCard({ section, index, prevTitle, nextTitle, readM
         readMode ? "max-w-5xl" : "max-w-3xl"
       }`}
     >
-      {/* Sticky header inside the card */}
-      <header
-        className={`sticky ${stickyOffset} z-10 rounded-t-2xl border-b border-stone-200 bg-white/95 px-6 pt-6 pb-3 backdrop-blur sm:px-8`}
-      >
+      <header className="rounded-t-2xl border-b border-stone-200 bg-white px-6 pt-6 pb-3 sm:px-8">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             <span className="font-mono text-xs uppercase tracking-wider text-stone-500">
