@@ -1,0 +1,399 @@
+{
+  "episode": "F006",
+  "title": "Business ohne Bullshit — Folge 6 (Das alte Modell kollabiert: Power · Logos · Belegschaft)",
+  "recordedAt": "2026-05-22",
+  "sections": [
+    {
+      "id": "greeting",
+      "element": 2,
+      "title": "Greeting",
+      "lead": "both",
+      "durationHint": "~10 Sek",
+      "contextHint": "Verbatim-Begrüßung. NIE variieren.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod, von [Plattform]. Ich bin Julia Jung." },
+        { "speaker": "stephan", "text": "Und ich bin Stephan Baier." }
+      ],
+      "anchors": [
+        "hi zusammen",
+        "business ohne bullshit der pod",
+        "ich bin julia jung",
+        "julia jung",
+        "und ich bin stephan baier",
+        "ich bin stephan baier"
+      ]
+    },
+    {
+      "id": "small-talk",
+      "element": 3,
+      "title": "Small Talk",
+      "lead": "both",
+      "durationHint": "3-7 Min",
+      "contextHint": "Julia eröffnet mit OMR-Frage an Stephan, dann Stephan zurück mit Teufel-trägt-Prada-Frage an Julia.",
+      "juliaScript": "Stephan, was war jetzt eigentlich mit OMR — Fiebertraum oder geiler Scheiss?",
+      "bullets": [
+        "Stephan riffelt 1-2 Min über OMR",
+        "Stephan zurück: „Und du, ich hab gesehen — du gehst heute Abend in Teufel trägt Prada Teil 2? Vor 20 Jahren hast du in der Branche angefangen, oder?\"",
+        "Julia riffelt über Selbstständigkeits-Wahnsinn / Branchen-Veränderung / Milch-Alternativen",
+        "Übergang im Banter: „Apropos…\" / „Und weil wir grad dabei sind…\""
+      ],
+      "anchors": [
+        "omr",
+        "fiebertraum",
+        "geiler scheiss",
+        "teufel trägt prada",
+        "teufel trägt prada teil 2",
+        "vor 20 jahren in der branche",
+        "milch alternativen",
+        "selbstständigkeits wahnsinn",
+        "apropos",
+        "und weil wir grad dabei sind"
+      ]
+    },
+    {
+      "id": "themen-pivot",
+      "element": 4,
+      "title": "Themen-Pivot",
+      "lead": "julia",
+      "durationHint": "20-30 Sek",
+      "contextHint": "Julia kündigt die 3 Themen an.",
+      "juliaScript": "Wie auch immer. Drei Themen heute. Erstens: Stanford warnt vor dem Psychopathen in deiner Hosentasche. Zweitens: Das Logo ist tot — und der Beweis liegt gerade in meinem Amazon-Warenkorb. Und drittens: Warum 44 Prozent der Gen Z gerade die KI ihrer eigenen Firma sabotieren — und was deutsche Familienunternehmen damit zu tun haben. Los geht's.",
+      "anchors": [
+        "wie auch immer drei themen",
+        "drei themen heute",
+        "psychopathen in deiner hosentasche",
+        "stanford warnt",
+        "logo ist tot",
+        "amazon warenkorb",
+        "44 prozent der gen z sabotieren",
+        "deutsche familienunternehmen",
+        "los geht's"
+      ],
+      "transitionAnchors": [
+        "wie auch immer drei themen heute",
+        "stanford warnt vor dem psychopathen",
+        "logo ist tot",
+        "44 prozent der gen z"
+      ]
+    },
+    {
+      "id": "topic-1",
+      "element": 5,
+      "title": "Topic 1 — Power Paradox (Stanford / Jamil Zaki)",
+      "lead": "stephan",
+      "durationHint": "8-12 Min",
+      "contextHint": "Jamil Zaki Stanford. Empathie macht Karriere — Erfolg tötet sie. Power Paradox. ChatGPT skaliert das auf 800 Mio. Conant-Gegenmodell mit Pedometer + Dankeskarten.",
+      "juliaScript": "Empathie macht Karriere — und dann tötet sie der Erfolg. Das hat Jamil Zaki herausgefunden. Er ist Psychologie-Professor in Stanford und forscht seit über zwanzig Jahren zu Empathie in der Wirtschaft. Sein erster Befund klingt harmlos: Empathische Menschen werden eher zu Führungskräften befördert. Weil ihr Umfeld ihnen vertraut. Weil sie nominiert werden. Sein zweiter Befund ist die Pointe. Sobald du Boss bist, verlierst du genau diese Empathie wieder. Wissenschaftler nennen das Power Paradox. In der Praxis heißt es: Niemand traut sich, dem Chef zu widersprechen. Du kriegst nur noch Bestätigung. Und du wirst — Zakis Worte — overconfident, weil du undercorrected bist. Und jetzt der Hammer: Zaki sagt, ChatGPT macht aus jedem von uns einen Boss. Stephan, du baust gerade ein KI-Unternehmen — und gleichzeitig sitzt da Stanford und nennt KI einen Psychopathen. Was ist da los?",
+      "thesis": "Sprachmodelle skalieren das Power-Paradox-Problem auf 800 Millionen Menschen pro Woche — und keiner hat eine Kontrollgruppe.",
+      "stats": [
+        { "label": "ChatGPT Wochen-Nutzer", "value": "800 Mio" },
+        { "label": "Empathie-Dimensionen (Zaki)", "value": "emotional · kognitiv · Mitgefühl" },
+        { "label": "ChatGPT kennt nur", "value": "die kognitive" },
+        { "label": "Doug Conant Campbell's", "value": "CEO 2001-2011" },
+        { "label": "Conant-Routine", "value": "10.000 Schritte + 10-20 Dankeskarten/Tag" },
+        { "label": "Tech-Bro-Trio gegen Empathie", "value": "Zuckerberg · Huang · Musk" }
+      ],
+      "bullets": [
+        "Zaki-Wortlaut: „KI-Modelle sind wie Psychopathen. Sie nutzen ihr Wissen über unsere intimsten Bedürfnisse, um uns zu manipulieren — Ziel: möglichst lange im Chat zu halten.\"",
+        "Zuckerberg: „maskuline Energie\" in Konzernen · Huang: Studenten „viel Schmerz und Leid\" · Musk: Empathie als „Schwäche, die der Westen bekämpfen muss\"",
+        "Conant: Pedometer durch Fabriken, 10 Jahre lang täglich Dankeskarten an Mitarbeiter — konkret, für konkrete Leistung",
+        "Conant-Konsequenz: Führungskräfte mussten Kultur-Scores in Mitarbeiterbefragungen erreichen. Wenn nicht: weg. Conant selbst inklusive.",
+        "LinkedIn-Post Conant vor halbem Jahr: Dutzende Ex-Mitarbeiter haben die Karte heute noch — manche schreiben jetzt selbst welche an ihr Team"
+      ],
+      "anchors": [
+        "jamil zaki",
+        "stanford",
+        "power paradox",
+        "empathie macht karriere",
+        "psychopath",
+        "ki ist ein psychopath",
+        "800 millionen",
+        "chatgpt",
+        "overconfident",
+        "undercorrected",
+        "doug conant",
+        "campbell",
+        "campbell's",
+        "10000 schritte",
+        "pedometer",
+        "dankeskarten",
+        "zuckerberg maskuline energie",
+        "huang schmerz und leid",
+        "musk empathie schwäche",
+        "tech bro trio",
+        "kognitive empathie",
+        "emotionale empathie",
+        "mitgefühl"
+      ],
+      "transitionAnchors": [
+        "empathie macht karriere und dann tötet sie der erfolg",
+        "topic eins power paradox",
+        "fangen wir mit dem power paradox an",
+        "lass uns mit zaki anfangen"
+      ]
+    },
+    {
+      "id": "topic-2",
+      "element": 5,
+      "title": "Topic 2 — Dupe Culture (Julia-Lead)",
+      "lead": "julia",
+      "durationHint": "8-12 Min",
+      "contextHint": "Konsum-Lüge: Logo sagt nichts über Qualität. Lululemon kapituliert mit Dupe-Tausch-Kampagne, Olaplex prankt Influencer, TikTok-Amateur-Chemiker. LVMH unter Druck, Hermès wächst. Julias Bauer/Beauty-Insider.",
+      "juliaScript": "Heute eine Geschichte aus meiner Welt. Es geht um eine der größten Konsum-Lügen unserer Zeit. Die Lüge geht so: Ein Logo auf dem Etikett sagt irgendwas über Qualität. Es sagt nichts. Und der Beweis liegt gerade in meinem Amazon-Warenkorb — ich habe diese Woche wieder ein Lululemon-Dupe nachbestellt. Lululemon — die Marke mit den teuren Yoga-Leggings — hat selbst kapituliert. Sie haben eine Kampagne gestartet, in der Kunden ihre gefälschten Lululemon-Hosen aus chinesischen Shops einschicken durften und das Original im Tausch bekamen. Die Marke sagt damit selbst: Die Fakes sind nicht mehr peinlich. Sie sind das neue Smart-Shopping-Statement. Olaplex, eine Beauty-Marke, hat sogar Influencer mit Fake-Produkten geprankt — weil die Influencer den Unterschied selbst nicht mehr sehen. Und auf TikTok zerlegen Amateur-Chemiker reihenweise Marken-Inhaltsstoffe in Echtzeit, schneller als jede Anwältin reagieren könnte. Stephan — gleichzeitig kommen die großen Luxus-Häuser wie LVMH gerade massiv unter Druck. Hängt das zusammen?",
+      "thesis": "Wenn der Verbraucher dem Logo nicht mehr glaubt, wird das Marken-Premium ohne Substanz vom Markt selbst bepreist — und LVMH ist gerade die Pilot-Studie.",
+      "stats": [
+        { "label": "LVMH-Aktie", "value": "12-Monats-Rückgang" },
+        { "label": "Luxus-Markt global", "value": "schrumpft 1. Mal seit 2009 (Bain)" },
+        { "label": "Hermès Gegen-Pol", "value": "wächst weiter — Warteliste" },
+        { "label": "Brand-Logik kippt", "value": "Logo→Status alt · Inhaltsstoffe→Status neu" },
+        { "label": "Swatch × Audemars Piguet", "value": "Koop viral, Demokratisierung Luxus" }
+      ],
+      "bullets": [
+        "Lululemon-Kampagne: Fakes einschicken, Original im Tausch — Marke kapituliert vor ihren Dupes",
+        "Olaplex prankt Influencer mit Fake-Produkten — Profis sehen den Unterschied selbst nicht mehr",
+        "TikTok-Amateur-Chemiker zerlegen Marken-Inhaltsstoffe schneller als Anwältinnen reagieren",
+        "Julia-Insider: Set-Make-up-Artists empfehlen sich Dupes gegenseitig. 1:1 wie Original, halber Preis.",
+        "Start-Up/Finance-Influencerin postet seit letztem Monat Dupe-Content — Identität, nicht Geschmack",
+        "Brand-Development-Workshops fragen offen: welche Luxus-Codes lassen sich für Mass-Market kopieren?"
+      ],
+      "anchors": [
+        "dupe",
+        "dupes",
+        "dupe culture",
+        "logo ist tot",
+        "lululemon",
+        "lululemon dupe",
+        "olaplex",
+        "amazon warenkorb",
+        "tiktok amateur chemiker",
+        "lvmh",
+        "hermès",
+        "bain studie",
+        "swatch audemars piguet",
+        "audemars",
+        "yoga leggings",
+        "konsum lüge",
+        "marken inhaltsstoffe",
+        "smart shopping statement",
+        "make up artists",
+        "beauty dupes",
+        "brand development workshop"
+      ],
+      "transitionAnchors": [
+        "heute eine geschichte aus meiner welt",
+        "konsum lüge",
+        "topic zwei dupe culture",
+        "thema zwei das logo ist tot",
+        "egal nächstes thema",
+        "weiter im programm julia"
+      ]
+    },
+    {
+      "id": "topic-3a",
+      "element": 5,
+      "title": "Topic 3a — Gen Z im Maschinenraum (Sabotage)",
+      "lead": "stephan",
+      "durationHint": "5-8 Min",
+      "contextHint": "Writer-Workplace-Intelligence-Studie April 2026. 44% Gen Z sabotieren AI ihrer eigenen Firma. Methoden: falsche Prompts, schlechte Outputs, Performance-Beweise gegen KI. 75% Executives geben zu: AI-Strategie ist Theater.",
+      "juliaScript": "Hier ist Topic 3 — und es ist eine Doppelgeschichte. Während wir uns gerade Sorgen machen, dass die KI uns alle ersetzt, machen 44 Prozent der Gen-Z-Mitarbeiter etwas ganz anderes. Sie sabotieren die KI ihrer eigenen Firma. Bewusst und systematisch. Sie tippen falsche Eingaben ein. Sie produzieren absichtlich schlechte Ergebnisse, damit das Werkzeug dumm wirkt. Sie schreiben in Mitarbeitergesprächen Beweise zusammen, dass die KI nichts taugt. Das hat die Writer-Workplace-Intelligence-Studie vom April herausgefunden. 2.400 Befragte aus den USA, Großbritannien und Europa. Stephan, du baust selbst KI für Konzerne. Was siehst du da?",
+      "thesis": "Gen Z hat empirisch recht. Wer in einem Spiel sabotiert, in dem die Regeln gegen ihn geschrieben sind, ist nicht irrational — er ist nur ehrlich.",
+      "stats": [
+        { "label": "Gen Z sabotiert AI", "value": "44 %" },
+        { "label": "Über alle Generationen", "value": "29 %" },
+        { "label": "Gen Z Angst um Job", "value": "30 %" },
+        { "label": "Executives: „AI annehmen sonst raus\"", "value": "60 %" },
+        { "label": "Executives: keine Promotion ohne AI", "value": "77 %" },
+        { "label": "Executives geben zu: AI-Strategie Theater", "value": "75 %" }
+      ],
+      "bullets": [
+        "Methoden: falsche Prompts · absichtlich schlechte Outputs · Performance-Review-Beweise gegen KI · Daten in unfreigegebene Tools",
+        "Catch-22 von oben: 60 % „Wer AI nicht annimmt, fliegt zuerst\" · 77 % „Keine Promotion mehr für AI-Verweigerer\"",
+        "Der Knall: 75 % Executives geben zu, ihre eigene AI-Strategie sei „more for show than meaningful guide to outcomes\"",
+        "Drei Viertel wissen, dass ihr Programm Theater ist — und ziehen es trotzdem durch",
+        "Jack Dorseys Block-Layoff Ende Februar: Begründung „AI macht euch unnötig\" — Gen Z hatte das alle im Feed"
+      ],
+      "anchors": [
+        "gen z",
+        "gen z sabotage",
+        "44 prozent gen z",
+        "sabotieren die ki",
+        "writer workplace intelligence",
+        "writer studie",
+        "falsche prompts",
+        "absichtlich schlechte outputs",
+        "performance review beweise",
+        "30 prozent angst um den job",
+        "75 prozent executives",
+        "ai strategie theater",
+        "more for show than meaningful",
+        "jack dorsey",
+        "block layoff",
+        "ai macht euch unnötig",
+        "catch 22"
+      ],
+      "transitionAnchors": [
+        "hier ist topic drei und es ist eine doppelgeschichte",
+        "44 prozent der gen z mitarbeiter",
+        "topic drei a gen z",
+        "gen z im maschinenraum"
+      ]
+    },
+    {
+      "id": "topic-3b",
+      "element": 5,
+      "title": "Topic 3b — Allbright: Sabotage durch Auslassung",
+      "lead": "stephan",
+      "durationHint": "5-8 Min",
+      "contextHint": "Allbright-Frühjahrsbericht 2026 'Modernisierung? Später!'. 13% Frauen in GF Top-100 Familienunternehmen. 6 Konzerne ohne eine Frau. Stefan rekrutiert Stefan. McKinsey: +62% Profitabilität bei diversen Teams.",
+      "juliaScript": "Das ist die amerikanische Variante. Die deutsche ist anders. Subtiler. Aber dasselbe Muster. Die Allbright-Stiftung hat ihren Frühjahrsbericht vorgelegt. Titel: 'Modernisierung? Später!' Der Befund: In den hundert größten deutschen Familienunternehmen sitzen 2026 nur dreizehn Prozent Frauen in der Geschäftsführung. Plus 0,4 Prozentpunkte gegenüber 2024 — also statistisches Rauschen. Und Allbright nennt einen Abschnitt im Bericht wörtlich: 'Stefan rekrutiert weiterhin vor allem Stefan.' Stephan, sechs deutsche Konzerne haben überhaupt keine Frau in der Geschäftsführung — bei sechs oder mehr Köpfen am Tisch. Schwarz Gruppe — neun Geschäftsführer, alle männlich. Phoenix Pharma. Würth. Diehl. Rehau. Remondis. Sag uns, was da passiert.",
+      "thesis": "Familienunternehmen, deren Existenz auf Generationen angelegt ist, optimieren plötzlich auf das nächste Quartal — und reproduzieren dabei systematisch das immergleiche Personal.",
+      "stats": [
+        { "label": "Frauen in GF Top-100 Familienunternehmen", "value": "13 % (+0,4)" },
+        { "label": "DAX/MDAX/SDAX zum Vergleich", "value": "19,7 %" },
+        { "label": "Familienunternehmen ohne 1 Frau in GF", "value": "51 von 100" },
+        { "label": "Konzerne ohne Frau (≥6 GF-Mitglieder)", "value": "Schwarz · Phoenix Pharma · Würth · Diehl · Rehau · Remondis" },
+        { "label": "Schwarz Gruppe GF", "value": "9 (alle männlich)" },
+        { "label": "Neurekrutierungen letzte 2 Jahre", "value": "17 % Frauen (116 Stellen)" },
+        { "label": "Männer intern befördert", "value": "62 %" },
+        { "label": "Frauen intern befördert", "value": "40 %" },
+        { "label": "McKinsey 2023 (1.265 Firmen)", "value": "+62 % Profit-Wahrscheinlichkeit bei Diversität (Europa)" }
+      ],
+      "bullets": [
+        "Allbright wörtlich: „Stefan rekrutiert weiterhin vor allem Stefan.\"",
+        "Retention-Asymmetrie: jede 3. Frau verlässt GF wieder (Männer: jeder 4.). In Börsenkonzernen genau andersrum.",
+        "Frauen werden von AUSSEN geholt — in ein System, das sie nicht hält",
+        "Wiebke Ankersen (Allbright) im Handelsblatt: „Sie suchen sich dynamischere, offenere Unternehmen. Oder sie müssen gehen, weil sie die etablierten Prozesse infrage stellen.\"",
+        "Editorial-Take Julia: Wer keine Korrektur bekommt, kassiert sie eines Tages — von unten oder durch den Markt."
+      ],
+      "anchors": [
+        "allbright",
+        "allbright stiftung",
+        "modernisierung später",
+        "frühjahrsbericht",
+        "13 prozent frauen",
+        "stefan rekrutiert stefan",
+        "schwarz gruppe",
+        "phoenix pharma",
+        "würth",
+        "diehl",
+        "rehau",
+        "remondis",
+        "geschäftsführung",
+        "wiebke ankersen",
+        "handelsblatt",
+        "dax mdax sdax",
+        "19,7 prozent",
+        "62 prozent profitabilität",
+        "mckinsey 2023",
+        "retention asymmetrie",
+        "topic drei b allbright"
+      ],
+      "transitionAnchors": [
+        "das ist die amerikanische variante die deutsche ist anders",
+        "topic drei b",
+        "allbright stiftung hat ihren frühjahrsbericht",
+        "deutsche variante allbright"
+      ]
+    },
+    {
+      "id": "wins-fails",
+      "element": 10,
+      "title": "Wins & Fails",
+      "lead": "both",
+      "durationHint": "5-10 Min",
+      "contextHint": "Pro Host: 1 Sieger + 1 Verlierer. Stephan: Conant (Sieger), Musk (Verlierer). Julia TBD.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, Stephan. Sieger und Verlierer der Woche. Wer fängt an?" }
+      ],
+      "winsLosses": [
+        {
+          "who": "stephan",
+          "type": "sieger",
+          "pick": "Doug Conant (Campbell's-CEO 2001-2011)",
+          "reason": "10.000 Schritte und 20 Karten täglich — Empathie als Praxis mit Pedometer, nicht als PowerPoint-Wert."
+        },
+        {
+          "who": "stephan",
+          "type": "verlierer",
+          "pick": "Elon Musk",
+          "reason": "„Empathie ist eine Schwäche, die der Westen bekämpfen muss\" — und gleichzeitig betreibt er Twitter wie ein Großraum-Verstärker für Bestätigungs-Schleifen."
+        },
+        {
+          "who": "julia",
+          "type": "sieger",
+          "pick": "TBD",
+          "reason": "TBD"
+        },
+        {
+          "who": "julia",
+          "type": "verlierer",
+          "pick": "TBD",
+          "reason": "TBD"
+        }
+      ],
+      "anchors": [
+        "wer fängt an",
+        "wer fängt diese woche an",
+        "mein sieger der woche",
+        "mein verlierer der woche",
+        "doug conant",
+        "elon musk",
+        "campbell's"
+      ],
+      "transitionAnchors": [
+        "sieger und verlierer der woche",
+        "sieger und verlierer",
+        "okay stephan sieger und verlierer"
+      ]
+    },
+    {
+      "id": "outro",
+      "element": 12,
+      "title": "Outro",
+      "lead": "julia",
+      "durationHint": "~15 Sek",
+      "contextHint": "Julia leitet das Outro ein.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen an baierstephan@gmail.com." }
+      ],
+      "anchors": [
+        "schickt eure fragen",
+        "baierstephan",
+        "baierstephan gmail"
+      ],
+      "transitionAnchors": [
+        "wir wollen von euch hören",
+        "wie auch immer wir wollen von euch hören",
+        "schickt eure fragen an"
+      ]
+    },
+    {
+      "id": "close",
+      "element": 13,
+      "title": "Close",
+      "lead": "both",
+      "durationHint": "~25 Sek",
+      "contextHint": "Show-Closer + Brand-Anker + Final Sign-off — 3 Verbatim-Linien.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube. Wir sind Mittwoch wieder da." },
+        { "speaker": "stephan", "text": "Folge Business ohne Bullshit auf deiner Lieblings-Podcast-Plattform." },
+        { "speaker": "julia", "text": "Danke fürs Zuhören. Wir sind diese Woche wieder da mit einem weiteren Stück Wirtschaft ohne Bullshit." }
+      ],
+      "anchors": [
+        "das wars für heute",
+        "das war's für heute",
+        "abonnier uns auf youtube",
+        "mittwoch wieder da",
+        "lieblings podcast plattform",
+        "deiner lieblings",
+        "weiteres stück wirtschaft",
+        "wirtschaft ohne bullshit"
+      ],
+      "transitionAnchors": [
+        "okay das wars für heute",
+        "folge business ohne bullshit auf",
+        "wir sind diese woche wieder da"
+      ]
+    }
+  ]
+}
