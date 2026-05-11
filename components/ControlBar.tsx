@@ -2,6 +2,7 @@
 
 import type { RecognizerState } from "@/lib/recognizer";
 import MicIndicator from "./MicIndicator";
+import { formatTime, timerStatus, type DurationRange } from "@/lib/timer";
 
 type Props = {
   episodeTitle: string;
@@ -15,6 +16,11 @@ type Props = {
   currentIndex: number;
   totalSections: number;
   confidence: "high" | "low";
+  timerSecs: number;
+  timerRunning: boolean;
+  timerRange: DurationRange | null;
+  onToggleTimer: () => void;
+  onResetTimer: () => void;
 };
 
 export default function ControlBar({
@@ -29,20 +35,61 @@ export default function ControlBar({
   currentIndex,
   totalSections,
   confidence,
+  timerSecs,
+  timerRunning,
+  timerRange,
+  onToggleTimer,
+  onResetTimer,
 }: Props) {
   const isListening = recognizerState === "listening" || recognizerState === "starting";
 
+  const status = timerStatus(timerSecs, timerRange);
+  const statusBg: Record<typeof status, string> = {
+    neutral: "bg-stone-100 text-stone-700",
+    ok: "bg-emerald-100 text-emerald-900",
+    warn: "bg-amber-100 text-amber-900",
+    over: "bg-red-100 text-red-900",
+  };
+
+  const headerBg =
+    recognizerState === "listening" && confidence === "high"
+      ? "bg-emerald-50/70"
+      : recognizerState === "listening" && confidence === "low"
+        ? "bg-amber-50/70"
+        : recognizerState === "error"
+          ? "bg-red-50/70"
+          : "bg-white/85";
+
   return (
-    <header className="sticky top-0 z-30 border-b border-stone-200 bg-white/85 backdrop-blur-md">
+    <header
+      className={`read-hide sticky top-0 z-30 border-b border-stone-200 backdrop-blur-md transition-colors ${headerBg}`}
+    >
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 py-3">
         <div className="flex items-center gap-4">
-          <div className="font-display text-lg font-semibold text-stone-900">
-            {episodeTitle}
-          </div>
+          <div className="font-display text-lg font-semibold text-stone-900">{episodeTitle}</div>
           <MicIndicator state={recognizerState} confidence={confidence} />
         </div>
 
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={onToggleTimer}
+            className={[
+              "rounded-md px-3 py-1.5 font-mono text-sm font-semibold tracking-wider transition",
+              statusBg[status],
+              timerRunning ? "ring-2 ring-accent/40" : "",
+            ].join(" ")}
+            title="Timer Start/Pause (T) · Reset (R)"
+            onDoubleClick={onResetTimer}
+          >
+            {formatTime(timerSecs)}
+            {timerRange && (
+              <span className="ml-1.5 text-[10px] font-normal opacity-60">
+                / {Math.floor(timerRange.minSec / 60)}-{Math.floor(timerRange.maxSec / 60)}min
+              </span>
+            )}
+          </button>
+
           <button
             type="button"
             onClick={onPrev}
