@@ -1,82 +1,32 @@
 # BoB Live-Prompter
 
-Live-Teleprompter für die Podcast-Aufnahme von **Business ohne Bullshit**. Hört über das Mic mit, erkennt anhand von Anchor-Keywords + Kontext, welche Section gerade läuft, scrollt automatisch zu den passenden Speaking Notes + Stat-Drops. Beide Hosts (Julia + Stephan) öffnen ihre eigene URL in Chrome — null Friction, kein Notion-Scrolling während Aufnahme.
+Live-Teleprompter für die Podcast-Aufnahme von **Business ohne Bullshit**. Zeigt pro Folge die Speaking Notes mit Active-Card-UX — Julia-Read-Texte, Stephan-Thesen, Stats und Bullets — auf einer fokussierten Karte. Optional läuft eine Mic-Recognition mit Auto-Follow im Hintergrund (Web Speech API + Claude-Haiku-Reality-Check), Primary-Navigation aber über Pfeiltasten.
 
-**Status:** V1 · Aufnahme F004 am Mi 13.05.2026
+**Live:** [bob-prompter.vercel.app](https://bob-prompter.vercel.app) · **Latest-Folge:** [/latest](https://bob-prompter.vercel.app/latest)
 
 ---
 
-## Quickstart Julia
+## Quickstart für Julia + Stephan
 
-1. URL in **Chrome** öffnen (Stephan schickt sie): `https://bob-prompter.vercel.app/latest`
-2. Klick auf **„▸ Start"** oben rechts → Chrome fragt nach Mic-Permission → erlauben
-3. Headphones auf, losgehen — das Tool scrollt selbst zur aktuellen Section
-
-**Manuelle Navigation** (wenn nötig):
-- `↓` Pfeiltaste → nächste Section
-- `↑` Pfeiltaste → vorherige Section
-- `Space` → Auto-Follow toggle (an/aus)
-- Klick auf Section in der Liste → springt direkt hin
-- `D` → Debug-Drawer (für Stephan, zeigt erkannte Wörter + LLM-Status)
-
-**Browser:** Nur **Chrome** oder **Edge**. Safari/Firefox können kein Web Speech API.
+1. **Chrome oder Edge** öffnen (Safari/Firefox geht nicht — Web Speech API fehlt)
+2. URL: `https://bob-prompter.vercel.app/latest` (Stephan schickt sie ~30 Min vor Aufnahme)
+3. **Navigation** (das ist der primäre Pfad — Mic ist optional):
+   - **`←` / `→`** → vorherige / nächste Section
+   - **`↑` / `↓`** → Seite hoch / runter scrollen (Browser-Default)
+   - **Click** auf Timeline-Chip oben → springt direkt hin
+   - **`Space`** → Auto-Follow toggle (an/aus)
+   - **`D`** → Debug-Drawer (Mic-Status, Section-Scores, LLM-Reality-Check)
+4. **Optional — Mic-Auto-Follow:** Klick auf **„▸ Start"** oben rechts → Mic-Permission erlauben. Das Tool versucht dann passiv, der Stimme zu folgen. Latenz kann variieren (Web Speech API ist nicht deterministisch). Bei Hängern einfach Pfeiltasten benutzen.
 
 ---
 
 ## Architektur (Kurzform)
 
-- **Pure-JS Matcher (alle ~800ms):** rolling 80-Word-Buffer, scoring mit Anchors + TF-IDF + Transition-Triggers + Stickiness. Sprung erst nach 2 konsekutiven Tick-Bestätigungen.
-- **LLM Reality-Check (alle 20s):** Background-Call an Claude Haiku 4.5, der die letzten ~60 Wörter + Section-Metadata bekommt und klassifiziert. Wenn Confidence ≥75% UND andere Section → Override.
-- **Headless UI:** Mic-Status nur als dezentes Icon im Header (grün-pulse aktiv, gelb low-confidence, rot Fehler). Keine durchlaufende Transcript-Bar. Debug auf `D`.
-
----
-
-## Quickstart Stephan (Build/Update)
-
-### Setup einmalig
-
-```bash
-cd the-blueprint/podcast/bob-prompter
-bun install
-cp .env.local.example .env.local
-# Trag deinen Anthropic API Key in .env.local ein
-```
-
-### Dev
-
-```bash
-bun dev                # http://localhost:3000
-```
-
-### Neue Folge hinzufügen
-
-```bash
-# 1. Vorlage kopieren
-cp data/f004.json data/f005.json
-
-# 2. Felder anpassen: episode, title, recordedAt
-$EDITOR data/f005.json
-
-# 3. Themen-Inhalte, Speaking Points, Stats, Anchors, transitionAnchors ergänzen
-# (Pro Section mind. 5 Anchors + 3 transitionAnchors für sauberes Matching)
-
-# 4. Push → Vercel deployed automatisch (~30s)
-git add data/f005.json
-git commit -m "F005: $(date +%Y-%m-%d)"
-git push
-```
-
-Tool zeigt automatisch die neueste Folge (nach `recordedAt`-Datum) als „AKTUELL" auf der Home-Page. `/latest` redirected direkt dorthin.
-
-### Anchor-Tuning
-
-Beim Tunen pro Section:
-- **`anchors`** — normale Match-Phrasen, breit (Multi-Word +5, Single +1)
-- **`transitionAnchors`** — hochpräzise Exit/Entry-Phrasen (+15), z.B. „egal weiter im programm"
-- **`verbatim`** — exakte Sätze (4-Gram-Match → +10)
-- **`contextHint`** — 1-Satz-Beschreibung für LLM-Disambiguation
-
-Lokal testen mit `bun dev`, dann pushen.
+- **9-Section-Speaking-Notes-Layout** (ab F005): Greeting · Small Talk · Themen-Pivot · Topic 1/2/3 · Wins & Fails · Outro · Close. Cold Open wird post-production zusammengeschnitten, kommt nicht ins Tool.
+- **Active-Card-UX:** Eine zentrale Karte zeigt die aktuelle Section komplett. `VORHER / JETZT / DANACH`-Marker oben, Slide-Up-Animation beim Wechsel. Kein Section-Stack mit Scroll-Through.
+- **Pure-JS Matcher (alle 800ms):** Rolling-80-Word-Buffer + TF-IDF-Vokabular + Stickiness-Bonus + 2-Tick-Hysterese gegen Flicker. Schlägt vorwärts bei Score ≥ 5, rückwärts bei ≥ 12.
+- **LLM Reality-Check (alle 20s):** Background-Call an Claude Haiku 4.5 (`/api/llm-classify`) mit den letzten ~60 Wörtern + Section-Metadata. Override bei Confidence ≥ 0.75 UND anderer Section. Fallback auf Pure-JS, wenn API-Key fehlt oder Endpoint nicht erreichbar.
+- **Headless UI:** Mic-Indikator als dezentes Icon im Header (grün = aktiv, amber = low confidence, rot = error). Keine durchlaufende Transcript-Bar. Debug-Drawer optional via `D`.
 
 ---
 
@@ -84,57 +34,101 @@ Lokal testen mit `bun dev`, dann pushen.
 
 ```
 bob-prompter/
-├── README.md                     ← du bist hier
-├── IMPLEMENTATION_PLAN.md        ← Architektur + MVP-Scope
+├── README.md                       ← du bist hier
+├── DEPLOY.md                       ← GitHub + Vercel-Workflow
+├── IMPLEMENTATION_PLAN.md
 ├── USER_STORIES.md
 ├── DEFINITION_OF_DONE.md
 ├── BUILD_PROMPTS.md
-├── .env.local.example            ← API-Key-Template
+├── .env.local                      ← lokal, gitignored, hält ANTHROPIC_API_KEY
+├── .env.local.example
 ├── app/
 │   ├── layout.tsx
-│   ├── page.tsx                  ← Home: Folgen-Liste + AKTUELL-Badge
-│   ├── latest/page.tsx           ← Redirect zur neuesten Folge
-│   ├── [folge]/page.tsx          ← Prompter-View
-│   ├── api/llm-classify/route.ts ← LLM Reality-Check Endpoint
-│   └── icon.tsx                  ← Generated Favicon
+│   ├── page.tsx                    ← Home: Auto-Discovery aller data/*.json
+│   ├── latest/page.tsx             ← Redirect zur neuesten Folge
+│   ├── [folge]/page.tsx            ← Prompter-View
+│   ├── api/llm-classify/route.ts   ← Claude-Haiku-Endpoint (Node-Runtime)
+│   └── icon.tsx                    ← Generated Favicon
 ├── components/
-│   ├── Prompter.tsx              ← Haupt-Container, integriert Matcher + LLM
-│   ├── SectionCard.tsx
-│   ├── ControlBar.tsx
-│   ├── MicIndicator.tsx          ← Dezentes Mic-Icon im Header
-│   ├── DebugDrawer.tsx           ← Optional, via D-Taste
-│   └── BrowserCheck.tsx
+│   ├── Prompter.tsx                ← Haupt-Container, Keybindings, LLM-Loop
+│   ├── ActiveCard.tsx              ← Single zentrale Card mit Slide-Up
+│   ├── Timeline.tsx                ← Horizontale Section-Chips
+│   ├── UpNextPreview.tsx           ← Footer „Kommt als Nächstes"
+│   ├── ControlBar.tsx              ← Header mit Start/Stop/Auto-Follow/Nav
+│   ├── MicIndicator.tsx            ← Dezentes Mic-Status-Icon
+│   ├── DebugDrawer.tsx             ← Toggle via D-Taste
+│   └── BrowserCheck.tsx            ← Chrome-Warning-Overlay
 ├── lib/
-│   ├── types.ts                  ← Episode/Section-Schema
-│   ├── recognizer.ts             ← Web Speech API wrapper
-│   ├── matcher.ts                ← Pure-JS Matcher v2 (TF-IDF + Stickiness)
-│   ├── vocab.ts                  ← Vocabulary-Builder + IDF
-│   ├── llm-classify.ts           ← Client-Fetch zum API-Endpoint
-│   └── load-episode.ts           ← Server-side Auto-Discovery aus data/
+│   ├── types.ts                    ← Episode + Section Schema
+│   ├── recognizer.ts               ← Web Speech API Wrapper, Auto-Restart
+│   ├── matcher.ts                  ← Pure-JS Matcher v2 (TF-IDF + Stickiness)
+│   ├── vocab.ts                    ← Vocabulary-Builder + IDF
+│   ├── llm-classify.ts             ← Client-Fetch-Helper
+│   └── load-episode.ts             ← Server-side Auto-Discovery aus data/
 └── data/
-    └── f004.json                 ← Episode-Daten, ein File pro Folge
+    ├── f003.json                   ← Test-Folge (Erewhon · Oura · AI-Layoff)
+    ├── f004.json                   ← Placeholder-Folge
+    └── f005.json                   ← Erste produzierte Folge
 ```
 
 ---
 
-## Deployment auf Vercel
+## Episode-Schema (kurz)
 
-1. GitHub-Repo `stephanbaier/bob-prompter` erstellen
-2. `git push -u origin main`
-3. Vercel Dashboard → Import Project → Connect Repo → Deploy
-4. **Project Settings → Environment Variables → `ANTHROPIC_API_KEY`** setzen
-5. Re-Deploy triggern (sonst läuft Tool ohne LLM, Pure-JS only)
+```typescript
+type Section = {
+  id: string;                        // greeting, topic-1, wins-fails, ...
+  element: number;                   // 1-16 (15-Element-Architektur-Ref)
+  title: string;
+  lead: "julia" | "stephan" | "both";
+  durationHint?: string;             // "6-12 Min"
+  contextHint?: string;              // 1-Satz-Hint für LLM-Disambiguation
+
+  verbatim?: { speaker, text }[];    // exakte Quotes (Greeting, Closer)
+  juliaScript?: string;              // Was Julia konversationell vorliest
+  thesis?: string;                   // Stephans These (1-2 Sätze, blue-Block)
+  topicPreview?: string[];           // Pivot-Line: 3 Topic-Headlines
+  bullets?: string[];                // Stats + Talking-Points (flach, ~1 Zeile)
+  stats?: { label, value, source? }[];  // Pills (optional)
+  winsLosses?: WinLossEntry[];       // farbcodierte Sieger/Verlierer
+
+  anchors: string[];                 // Match-Keywords für Speech-Recognition
+  transitionAnchors?: string[];      // Hochpräzise Exit/Entry-Phrasen (+15 Score)
+}
+```
+
+Quelle der Wahrheit pro Folge sind zwei Markdown-Files in `the-blueprint/podcast/folgen/`:
+- `F<NNN>_SPEAKING.md` — schlanke Teleprompter-Version (Format wie F005_SPEAKING)
+- `F<NNN>_FOLGE.md` — volle Prosa-Version (Archiv / Show-Notes-Quelle)
+
+Das JSON in `data/` wird aus dem `_SPEAKING.md` abgeleitet (heute manuell, künftig per Script).
 
 ---
 
-## Goldstandard für Section-Struktur
+## Neue Folge hinzufügen
 
-Quelle: `the-blueprint/podcast/BoB_FOLGEN_ABLAUFPLAN.md` v1.0 (15-Element-Architektur)
+Siehe **[DEPLOY.md](./DEPLOY.md)** für den kompletten Workflow.
 
-Aktive Sections in F004 (12): cold-open · greeting · banter · pivot-line · thema-1 · thema-2 · thema-3 · sieger-verlierer · outro-beginn · show-closer · brand-anker · final-sign-off
-
-Inaktive (Pre-Launch-Phase): mid-roll-tease (8), re-open (9), cross-promo (11), production-credits (14, ab F006)
+Kurzform:
+1. `the-blueprint/podcast/folgen/F<NNN>_SPEAKING.md` schreiben (Format wie F005_SPEAKING.md)
+2. `data/f<nnn>.json` daraus ableiten (10 Sections, Anchors + transitionAnchors für Speech-Matching)
+3. `recordedAt` auf höchstes Datum setzen → wird automatisch `/latest`
+4. Commit + Push + `vercel deploy --prod --yes`
 
 ---
 
-*v1.0 · 2026-05-11*
+## Dev-Setup
+
+```bash
+cd the-blueprint/podcast/bob-prompter
+bun install
+cp .env.local.example .env.local
+# ANTHROPIC_API_KEY in .env.local eintragen
+bun dev   # http://localhost:3000
+```
+
+Optional ohne API-Key: Tool läuft trotzdem, nur ohne LLM-Reality-Check (Pure-JS Matcher reicht).
+
+---
+
+*v3.1 · 2026-05-11 · Speaking-Notes-Layout · Production-Deploy live unter bob-prompter.vercel.app*

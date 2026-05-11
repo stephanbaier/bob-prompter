@@ -47,9 +47,9 @@ export default function ControlBar({
             type="button"
             onClick={onPrev}
             className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-stone-700 hover:border-accent hover:text-accent"
-            title="Vorherige Section (↑)"
+            title="Vorherige Section (←)"
           >
-            ↑
+            ←
           </button>
           <span className="font-mono text-sm text-stone-600">
             {currentIndex + 1} / {totalSections}
@@ -58,9 +58,9 @@ export default function ControlBar({
             type="button"
             onClick={onNext}
             className="rounded-md border border-stone-300 bg-white px-3 py-1.5 text-sm font-medium text-stone-700 hover:border-accent hover:text-accent"
-            title="Nächste Section (↓)"
+            title="Nächste Section (→)"
           >
-            ↓
+            →
           </button>
 
           <button

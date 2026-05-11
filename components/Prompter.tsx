@@ -38,6 +38,15 @@ export default function Prompter({ episode }: Props) {
     notifyExternalJump: (idx: number) => void;
   } | null>(null);
 
+  const cardWrapRef = useRef<HTMLDivElement | null>(null);
+
+  // On section change, scroll the active card into view (top, not center)
+  useEffect(() => {
+    const el = cardWrapRef.current;
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [currentIndex]);
+
   const handleRecognizerEvent = useCallback((e: RecognizerEvent) => {
     if (e.type === "interim") {
       matcherRef.current?.pushTranscript(e.text, "interim");
@@ -70,7 +79,7 @@ export default function Prompter({ episode }: Props) {
     matcherRef.current = matcher;
   }, [matcher]);
 
-  // Keyboard handlers
+  // Keyboard handlers — Main nav: ← → switches sections, ↑ ↓ scrolls page
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const target = e.target as HTMLElement | null;
@@ -78,10 +87,10 @@ export default function Prompter({ episode }: Props) {
       const isEditable = tag === "input" || tag === "textarea" || target?.isContentEditable;
       if (isEditable) return;
 
-      if (e.key === "ArrowDown" || e.key === "j" || e.key === "ArrowRight") {
+      if (e.key === "ArrowRight" || e.key === "l") {
         e.preventDefault();
         setCurrentIndex((idx) => Math.min(sections.length - 1, idx + 1));
-      } else if (e.key === "ArrowUp" || e.key === "k" || e.key === "ArrowLeft") {
+      } else if (e.key === "ArrowLeft" || e.key === "h") {
         e.preventDefault();
         setCurrentIndex((idx) => Math.max(0, idx - 1));
       } else if (e.key === " " || e.code === "Space") {
@@ -91,6 +100,7 @@ export default function Prompter({ episode }: Props) {
         e.preventDefault();
         setDebugOpen((v) => !v);
       }
+      // ↑ ↓ falls through to browser-default page scroll — no preventDefault
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -200,23 +210,27 @@ export default function Prompter({ episode }: Props) {
         )}
         {mounted && state === "idle" && isSupported && (
           <div className="mb-4 rounded-md border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700">
-            👋 Klick oben rechts auf <strong>„▸ Start"</strong>, erlaube den Mic-Zugriff. Pfeiltasten{" "}
-            <kbd>↑</kbd>/<kbd>↓</kbd> für manuelle Navigation, <kbd>Space</kbd> toggelt Auto-Follow,{" "}
-            <kbd>D</kbd> öffnet Debug.
+            👋 <strong>Navigation:</strong>{" "}
+            <kbd>←</kbd> / <kbd>→</kbd> wechselt Section ·{" "}
+            <kbd>↑</kbd> / <kbd>↓</kbd> scrollt die Seite ·{" "}
+            <kbd>Space</kbd> toggelt Auto-Follow ·{" "}
+            <kbd>D</kbd> öffnet Debug. Mic-Auto-Follow optional: Klick auf <strong>„▸ Start"</strong>.
           </div>
         )}
 
         {activeSection && (
-          <ActiveCard
-            section={activeSection}
-            index={currentIndex}
-            prevTitle={currentIndex > 0 ? (sections[currentIndex - 1]?.title ?? null) : null}
-            nextTitle={
-              currentIndex < sections.length - 1
-                ? (sections[currentIndex + 1]?.title ?? null)
-                : null
-            }
-          />
+          <div ref={cardWrapRef} className="scroll-mt-32">
+            <ActiveCard
+              section={activeSection}
+              index={currentIndex}
+              prevTitle={currentIndex > 0 ? (sections[currentIndex - 1]?.title ?? null) : null}
+              nextTitle={
+                currentIndex < sections.length - 1
+                  ? (sections[currentIndex + 1]?.title ?? null)
+                  : null
+              }
+            />
+          </div>
         )}
       </main>
 
