@@ -1,0 +1,345 @@
+{
+  "episode": "F003",
+  "title": "Business ohne Bullshit — Folge 3 (Test: Erewhon · Oura · AI-Layoff-Falle)",
+  "recordedAt": "2026-05-14",
+  "sections": [
+    {
+      "id": "greeting",
+      "element": 2,
+      "title": "Begrüßung",
+      "lead": "both",
+      "durationHint": "~10 Sek",
+      "verbatim": [
+        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod, von [Plattform]. Ich bin Julia Jung." },
+        { "speaker": "stephan", "text": "Und ich bin Stephan Baier." }
+      ],
+      "anchors": [
+        "hi zusammen",
+        "business ohne bullshit der pod",
+        "ich bin julia jung",
+        "julia jung",
+        "und ich bin stephan baier",
+        "ich bin stephan baier"
+      ]
+    },
+    {
+      "id": "banter",
+      "element": 3,
+      "title": "Small Talk",
+      "lead": "both",
+      "durationHint": "3-5 Min",
+      "bullets": [
+        "Frei, Apropos-Wechsel",
+        "Erewhon-Self-Experience optional als Bridge zu Topic 1"
+      ],
+      "anchors": [
+        "stephan du warst diese woche",
+        "apropos",
+        "speaking of",
+        "wochenende",
+        "wetter"
+      ]
+    },
+    {
+      "id": "pivot-line",
+      "element": 4,
+      "title": "Drei Themen diese Woche",
+      "lead": "julia",
+      "durationHint": "10-15 Sek",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, drei Themen diese Woche." }
+      ],
+      "topicPreview": [
+        "Erewhon — 22-Dollar-Smoothie und Hailey-Bieber-Bühne in LA.",
+        "Oura, Whoop & das Wearables-Imperium.",
+        "Die AI-Layoff-Falle — Falk/Tsoukalas-Paper."
+      ],
+      "anchors": [
+        "wie auch immer drei themen",
+        "drei themen diese woche"
+      ],
+      "transitionAnchors": [
+        "wie auch immer drei themen diese woche",
+        "drei themen diese woche"
+      ]
+    },
+    {
+      "id": "thema-1",
+      "element": 5,
+      "title": "Erewhon: 22-Dollar-Smoothie & Hailey-Bieber-Bühne",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "contextHint": "Erewhon Premium-Bio-LA, Identity-Buying, Hailey Bieber Smoothie, DACH-Kontrast DM-Haul.",
+      "juliaScript": "Erewhon ist ein Premium-Bio-Supermarkt in LA — 22-Dollar-Smoothies, 10-Dollar-Einzel-Erdbeere, Schlange vor der Tür. Was bei dm in DACH peinlich wäre, ist dort Identitäts-Bühne. Hailey Bieber, Hadid, Jenner, Richie — alle haben ihren eigenen Smoothie. Stephan, was sagst du dazu? Wann kopiert ein DAX-Mittelständler das und verkackt's spektakulär?",
+      "stats": [
+        { "label": "Smoothie", "value": "USD 17-22" },
+        { "label": "Stores LA", "value": "9" },
+        { "label": "Antoci 2011", "value": "~USD 400k" },
+        { "label": "Umsatz", "value": "USD 100-200+ Mio (FLAGGED)" }
+      ],
+      "bullets": [
+        "Identity-Buying: du kaufst den Beweis, dort gewesen zu sein",
+        "Influencer-Posts SIND die Werbekampagne (Customer-Acquisition-Cost gegen 0)",
+        "Knappheit + Photo-Spots = Streetwear-Drop-Mechanik in Smoothie-Form",
+        "DACH-Kontrast: DM-Haul = Funktionalität gewinnt, Aspiration peinlich",
+        "DACH-Verkacker-Prediction: Galeria-Edition? Edeka-Premium-Pop-up?"
+      ],
+      "anchors": [
+        "erewhon",
+        "smoothie",
+        "22 dollar",
+        "hailey bieber",
+        "bella hadid",
+        "kendall jenner",
+        "los angeles",
+        "premium bio supermarkt",
+        "antoci",
+        "strawberry glaze",
+        "dm haul",
+        "identity buying",
+        "9 stores",
+        "10 dollar erdbeere"
+      ],
+      "transitionAnchors": [
+        "lass uns mit erewhon anfangen",
+        "thema eins erewhon",
+        "fangen wir mit erewhon an",
+        "erstes thema erewhon"
+      ]
+    },
+    {
+      "id": "thema-2",
+      "element": 5,
+      "title": "Oura, Whoop & das Wearables-Imperium",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "contextHint": "Wearables Status-Symbol, Oura 5,2 Mrd, Whoop 3,6 Mrd, 3-Margen-Hebel inkl. Datenverkauf.",
+      "juliaScript": "Wearables sind Status-Symbole. „Wieviel Tiefschlaf?\" ist der neue Smalltalk-Opener. Oura-Score ist das neue Sternzeichen. Hinter Oura, Whoop und Apple Watch steht ein Drei-Säulen-Geschäftsmodell — Hardware, Subscription, Daten. Stephan, ist die 5,2-Mrd-Bewertung gerechtfertigt oder Hype?",
+      "stats": [
+        { "label": "Oura Series D", "value": "USD 5,2 Mrd" },
+        { "label": "Oura Ringe", "value": "2,5 Mio+" },
+        { "label": "Membership", "value": "USD 5,99/Mo" },
+        { "label": "Whoop", "value": "USD 3,6 Mrd" },
+        { "label": "Apple Watch", "value": "~22% Marktanteil" },
+        { "label": "Wearables 2023", "value": "~540 Mio Units" }
+      ],
+      "bullets": [
+        "3 Margen-Hebel: Hardware + Subscription + Daten an Pharma/Versicherung",
+        "Du zahlst dafür, dass deine Daten verkauft werden",
+        "DACH-Lücke: TK/AOK/Barmer subventionieren US-Player",
+        "FDA vs Heilmittelwerbegesetz — Marketing-Spin verwischt Grenze",
+        "Adidas-miCoach-Friedhof: DACH-Wearables sind tot",
+        "Julia-Insider: Bauer-Wellness-PR = Beauty-Editorial 2.0"
+      ],
+      "anchors": [
+        "oura",
+        "whoop",
+        "apple watch",
+        "wearables",
+        "tiefschlaf",
+        "readiness score",
+        "recovery",
+        "ring 4",
+        "natural cycles",
+        "fda cleared",
+        "heilmittelwerbegesetz",
+        "aok barmer",
+        "krankenkasse bonus",
+        "5,2 mrd",
+        "series d",
+        "smartwatch",
+        "adidas micoach"
+      ],
+      "transitionAnchors": [
+        "egal weiter im programm",
+        "weiter im programm",
+        "nächstes thema oura",
+        "kommen wir zu oura",
+        "thema zwei wearables"
+      ]
+    },
+    {
+      "id": "thema-3",
+      "element": 5,
+      "title": "Die AI-Layoff-Falle (Falk/Tsoukalas)",
+      "lead": "stephan",
+      "durationHint": "8-15 Min",
+      "contextHint": "Falk/Tsoukalas-Paper, Demand-Externalität, Pigou-Steuer als einzige Lösung.",
+      "juliaScript": "Zwei Wirtschaftswissenschaftler haben ein formales Modell vorgelegt: Firma A automatisiert, spart Lohnkosten. Die Entlassenen kaufen weniger. Firma B spürt sinkende Nachfrage und entlässt auch. Reihum. Falk, UPenn. Tsoukalas, Boston University. Stephan, übersetz uns das Theorem so, dass es kein VWL-Studium braucht.",
+      "stats": [
+        { "label": "Paper", "value": "Falk/Tsoukalas arXiv" },
+        { "label": "Gegenmittel", "value": "7 — 6 scheitern" },
+        { "label": "Einzige Lösung", "value": "Pigou-Steuer auf Automation" },
+        { "label": "Eloundou", "value": "80% Jobs LLM-automatisierbar" }
+      ],
+      "bullets": [
+        "Demand-Externalität: Firma kassiert volle Ersparnis, trägt Bruchteil des Schadens",
+        "Individuell rational, kollektiv selbstmörderisch",
+        "Mehr Wettbewerb verschärft. Bessere AI auch (Red Queen)",
+        "UBI, Reskilling, Robot-Tax, Coasian — alle scheitern im Modell",
+        "Pigou-Steuer: politisch tot, mathematisch alternativlos",
+        "Salesforce, Block, Goldman/Devin — Praxisbeispiele der Spirale",
+        "Bäcker vergiftet seine Kunden — McDonalds-Roboter-Paradox"
+      ],
+      "anchors": [
+        "ai layoff",
+        "layoff falle",
+        "falk tsoukalas",
+        "ai layoff trap",
+        "upenn",
+        "boston university",
+        "pigou",
+        "pigou steuer",
+        "pigou-steuer",
+        "block",
+        "jack dorsey",
+        "salesforce",
+        "benioff",
+        "less heads with ai",
+        "cognition",
+        "devin",
+        "goldman sachs",
+        "anthropic",
+        "amodei",
+        "eloundou",
+        "red queen",
+        "robot tax",
+        "ubi",
+        "automation",
+        "burger roboter"
+      ],
+      "transitionAnchors": [
+        "wir müssen weiter aber",
+        "thema drei ai layoff",
+        "letztes thema ai layoffs",
+        "apropos ai layoffs"
+      ]
+    },
+    {
+      "id": "sieger-verlierer",
+      "element": 10,
+      "title": "Sieger & Verlierer der Woche",
+      "lead": "both",
+      "durationHint": "5-10 Min",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, Stephan. Sieger und Verlierer der Woche. Wer fängt diese Woche an?" }
+      ],
+      "winsLosses": [
+        {
+          "who": "stephan",
+          "type": "verlierer",
+          "pick": "Marc Benioff (Salesforce)",
+          "reason": "„I need less heads with AI\" — zu ehrlich ohne Reframing."
+        },
+        {
+          "who": "stephan",
+          "type": "sieger",
+          "pick": "Falk + Tsoukalas",
+          "reason": "Theorem, das jeder Vorstand kannte und keiner aussprechen wollte."
+        },
+        {
+          "who": "julia",
+          "type": "sieger",
+          "pick": "Hailey Bieber + Rhode-Akquisition",
+          "reason": "Influencer-Brand-Engineering = Industrie, USD 1 Mrd e.l.f. Beauty."
+        },
+        {
+          "who": "julia",
+          "type": "verlierer",
+          "pick": "Adidas miCoach",
+          "reason": "DACH-Wearable-Friedhof. Made in Germany = Schweigen."
+        }
+      ],
+      "anchors": [
+        "wer fängt diese woche an",
+        "mein sieger der woche",
+        "mein verlierer der woche",
+        "rhode",
+        "elf beauty",
+        "adidas micoach"
+      ],
+      "transitionAnchors": [
+        "sieger und verlierer der woche",
+        "sieger und verlierer",
+        "okay stephan sieger und verlierer"
+      ]
+    },
+    {
+      "id": "outro-beginn",
+      "element": 12,
+      "title": "Outro",
+      "lead": "julia",
+      "durationHint": "~15 Sek",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen zu Wirtschaft, Tech oder was euch beschäftigt an [E-Mail/URL]." }
+      ],
+      "anchors": [
+        "fragen zu wirtschaft",
+        "wirtschaft tech oder was euch beschäftigt"
+      ],
+      "transitionAnchors": [
+        "wir wollen von euch hören",
+        "schickt eure fragen",
+        "wie auch immer wir wollen von euch hören"
+      ]
+    },
+    {
+      "id": "show-closer",
+      "element": 13,
+      "title": "Show-Closer",
+      "lead": "julia",
+      "durationHint": "~10 Sek",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube. Wir sind Mittwoch wieder da." }
+      ],
+      "anchors": [
+        "danke fürs zuhören",
+        "abonnier uns auf youtube",
+        "mittwoch wieder da"
+      ],
+      "transitionAnchors": [
+        "okay das wars für heute",
+        "das wars für heute",
+        "das war's für heute"
+      ]
+    },
+    {
+      "id": "brand-anker",
+      "element": 15,
+      "title": "Brand-Anker",
+      "lead": "stephan",
+      "durationHint": "~5 Sek",
+      "verbatim": [
+        { "speaker": "stephan", "text": "Folge Business ohne Bullshit auf deiner Lieblings-Podcast-Plattform." }
+      ],
+      "anchors": [
+        "lieblings podcast plattform",
+        "lieblings-podcast-plattform",
+        "deiner lieblings"
+      ],
+      "transitionAnchors": [
+        "folge business ohne bullshit auf",
+        "folge business ohne bullshit auf deiner"
+      ]
+    },
+    {
+      "id": "final-sign-off",
+      "element": 16,
+      "title": "Final Sign-off",
+      "lead": "julia",
+      "durationHint": "~8 Sek",
+      "verbatim": [
+        { "speaker": "julia", "text": "Danke fürs Zuhören. Wir sind diese Woche wieder da mit einem weiteren Stück Wirtschaft ohne Bullshit." }
+      ],
+      "anchors": [
+        "weiteres stück wirtschaft",
+        "stück wirtschaft ohne bullshit",
+        "wirtschaft ohne bullshit"
+      ],
+      "transitionAnchors": [
+        "wir sind diese woche wieder da",
+        "weiteres stück wirtschaft ohne bullshit"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "episode": "F004",
+  "title": "Business ohne Bullshit — Folge 4 (Erste echte Folge)",
+  "recordedAt": "2026-05-13",
+  "sections": [
+    {
+      "id": "greeting",
+      "element": 2,
+      "title": "Begrüßung",
+      "lead": "both",
+      "verbatim": [
+        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod, von [Plattform]. Ich bin Julia Jung." },
+        { "speaker": "stephan", "text": "Und ich bin Stephan Baier." }
+      ],
+      "anchors": [
+        "hi zusammen",
+        "business ohne bullshit der pod",
+        "julia jung",
+        "ich bin stephan baier"
+      ]
+    },
+    {
+      "id": "banter",
+      "element": 3,
+      "title": "Small Talk",
+      "lead": "both",
+      "durationHint": "3-7 Min",
+      "bullets": [
+        "Julia öffnet mit externer-Event-Frage",
+        "Topic-Pool: Reise · Wochenende · Wetter · Family"
+      ],
+      "anchors": [
+        "stephan du warst diese woche",
+        "apropos",
+        "wochenende",
+        "wetter"
+      ]
+    },
+    {
+      "id": "pivot-line",
+      "element": 4,
+      "title": "Drei Themen diese Woche",
+      "lead": "julia",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, drei Themen diese Woche." }
+      ],
+      "topicPreview": [
+        "[Topic 1 TBD]",
+        "[Topic 2 TBD]",
+        "[Topic 3 TBD]"
+      ],
+      "anchors": [
+        "wie auch immer drei themen",
+        "drei themen diese woche"
+      ],
+      "transitionAnchors": [
+        "wie auch immer drei themen diese woche"
+      ]
+    },
+    {
+      "id": "thema-1",
+      "element": 5,
+      "title": "Thema 1 — [TBD]",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "juliaScript": "TBD — Tease + Time-Anchor + Faktenabfolge + Übergabe an Stephan.",
+      "stats": [
+        { "label": "Stat 1", "value": "TBD" }
+      ],
+      "bullets": [
+        "TBD"
+      ],
+      "anchors": [
+        "erste story",
+        "während wir aufnehmen",
+        "das hier ist absurd",
+        "stephan deine lesart"
+      ],
+      "transitionAnchors": [
+        "thema eins",
+        "erste story diese woche"
+      ]
+    },
+    {
+      "id": "thema-2",
+      "element": 5,
+      "title": "Thema 2 — [TBD]",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "juliaScript": "TBD",
+      "stats": [
+        { "label": "Stat 1", "value": "TBD" }
+      ],
+      "bullets": [
+        "TBD"
+      ],
+      "anchors": [
+        "zweite story",
+        "zweite geschichte"
+      ],
+      "transitionAnchors": [
+        "egal weiter im programm",
+        "weiter im programm",
+        "nächstes thema",
+        "thema zwei"
+      ]
+    },
+    {
+      "id": "thema-3",
+      "element": 5,
+      "title": "Thema 3 — [TBD]",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "juliaScript": "TBD",
+      "stats": [
+        { "label": "Stat 1", "value": "TBD" }
+      ],
+      "bullets": [
+        "TBD"
+      ],
+      "anchors": [
+        "dritte story",
+        "letzte story"
+      ],
+      "transitionAnchors": [
+        "wir müssen weiter",
+        "thema drei",
+        "drittes thema"
+      ]
+    },
+    {
+      "id": "sieger-verlierer",
+      "element": 10,
+      "title": "Sieger & Verlierer der Woche",
+      "lead": "both",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, Stephan. Sieger und Verlierer der Woche. Wer fängt diese Woche an?" }
+      ],
+      "winsLosses": [
+        { "who": "stephan", "type": "sieger", "pick": "TBD" },
+        { "who": "stephan", "type": "verlierer", "pick": "TBD" },
+        { "who": "julia", "type": "sieger", "pick": "TBD" },
+        { "who": "julia", "type": "verlierer", "pick": "TBD" }
+      ],
+      "anchors": [
+        "wer fängt diese woche an",
+        "mein sieger der woche",
+        "mein verlierer der woche"
+      ],
+      "transitionAnchors": [
+        "sieger und verlierer der woche",
+        "sieger und verlierer"
+      ]
+    },
+    {
+      "id": "outro-beginn",
+      "element": 12,
+      "title": "Outro",
+      "lead": "julia",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen zu Wirtschaft, Tech oder was euch beschäftigt an [E-Mail/URL]." }
+      ],
+      "anchors": [
+        "fragen zu wirtschaft",
+        "wirtschaft tech oder was euch beschäftigt"
+      ],
+      "transitionAnchors": [
+        "wir wollen von euch hören",
+        "schickt eure fragen"
+      ]
+    },
+    {
+      "id": "show-closer",
+      "element": 13,
+      "title": "Show-Closer",
+      "lead": "julia",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube. Wir sind Mittwoch wieder da." }
+      ],
+      "anchors": [
+        "danke fürs zuhören",
+        "abonnier uns auf youtube",
+        "mittwoch wieder da"
+      ],
+      "transitionAnchors": [
+        "okay das wars für heute",
+        "das wars für heute"
+      ]
+    },
+    {
+      "id": "brand-anker",
+      "element": 15,
+      "title": "Brand-Anker",
+      "lead": "stephan",
+      "verbatim": [
+        { "speaker": "stephan", "text": "Folge Business ohne Bullshit auf deiner Lieblings-Podcast-Plattform." }
+      ],
+      "anchors": [
+        "lieblings podcast plattform",
+        "deiner lieblings"
+      ],
+      "transitionAnchors": [
+        "folge business ohne bullshit auf"
+      ]
+    },
+    {
+      "id": "final-sign-off",
+      "element": 16,
+      "title": "Final Sign-off",
+      "lead": "julia",
+      "verbatim": [
+        { "speaker": "julia", "text": "Danke fürs Zuhören. Wir sind diese Woche wieder da mit einem weiteren Stück Wirtschaft ohne Bullshit." }
+      ],
+      "anchors": [
+        "weiteres stück wirtschaft",
+        "wirtschaft ohne bullshit"
+      ],
+      "transitionAnchors": [
+        "wir sind diese woche wieder da"
+      ]
+    }
+  ]
+}

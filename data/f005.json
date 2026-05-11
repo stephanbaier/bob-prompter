@@ -1,0 +1,301 @@
+{
+  "episode": "F005",
+  "title": "Business ohne Bullshit — Folge 5 (Microsoft Buyout · Julia-TBD · AI-Layoff-Trap)",
+  "recordedAt": "2026-05-20",
+  "sections": [
+    {
+      "id": "greeting",
+      "element": 2,
+      "title": "Greeting",
+      "lead": "both",
+      "durationHint": "~10 Sek",
+      "contextHint": "Verbatim-Begrüßung. NIE variieren.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod, von [Plattform]. Ich bin Julia Jung." },
+        { "speaker": "stephan", "text": "Und ich bin Stephan Baier." }
+      ],
+      "anchors": [
+        "hi zusammen",
+        "business ohne bullshit der pod",
+        "ich bin julia jung",
+        "julia jung",
+        "und ich bin stephan baier",
+        "ich bin stephan baier"
+      ]
+    },
+    {
+      "id": "small-talk",
+      "element": 3,
+      "title": "Small Talk",
+      "lead": "both",
+      "durationHint": "3-7 Min",
+      "contextHint": "Lockeres Small Talk. Julia → Stephan: externe-Event-Frage.",
+      "bullets": [
+        "Julia → Stephan: TBD (externe-Event-Frage)"
+      ],
+      "anchors": [
+        "stephan du warst diese woche",
+        "stephan was war das",
+        "apropos",
+        "speaking of",
+        "wochenende",
+        "wetter"
+      ]
+    },
+    {
+      "id": "themen-pivot",
+      "element": 4,
+      "title": "Themen-Pivot",
+      "lead": "julia",
+      "durationHint": "10-20 Sek",
+      "contextHint": "Julia kündigt die 3 Themen an + framing.",
+      "juliaScript": "Wie auch immer. Drei Themen heute. Erstens: Microsoft schickt zum ersten Mal seit 51 Jahren freiwillig Mitarbeiter nach Hause. Zweitens: [TBD Julia-Topic]. Und drittens: zwei Ökonomen haben eine Rechnung vorgelegt, die zeigt, warum genau das passiert. Fangen wir bei Microsoft an.",
+      "anchors": [
+        "wie auch immer drei themen",
+        "drei themen heute",
+        "erstens microsoft",
+        "zweitens",
+        "drittens zwei ökonomen",
+        "fangen wir bei microsoft an",
+        "warum genau das passiert"
+      ],
+      "transitionAnchors": [
+        "wie auch immer drei themen heute",
+        "erstens microsoft schickt",
+        "drittens zwei ökonomen haben",
+        "fangen wir bei microsoft an"
+      ]
+    },
+    {
+      "id": "topic-1",
+      "element": 5,
+      "title": "Topic 1 — Microsoft Buyout",
+      "lead": "stephan",
+      "durationHint": "6-12 Min",
+      "contextHint": "Microsoft erster freiwilliger Buyout in 51 Jahren — 8.750 Stellen, 900 Mio Programmkosten. Capex-Treiber 725 Mrd. Pfeffer + Gallup.",
+      "juliaScript": "Während wir aufnehmen, hat Microsoft das erste freiwillige Buyout-Programm seit 51 Jahren aufgesetzt. 23. April, Earnings Call. CFO Amy Hood liest eine Zahl vor: 8.750 Buyouts, 900 Millionen Dollar Programmkosten. Tonfall: Tagesordnungspunkt. Stephan, wer zahlt die Rechnung?",
+      "thesis": "Microsoft spart 900 Mio Lohnkosten, um 725 Mrd Capex zu finanzieren. Das ist nicht AI-First, das ist Buchhaltung.",
+      "bullets": [
+        "725 Mrd $ Capex 2026 bei Amazon + Microsoft + Alphabet + Meta, +77 % YoY",
+        "Amazon Q1: 16.000 · Meta ab 20. Mai: 8.000 · Nike: 1.400",
+        "Über 100.000 Tech-Stellen seit Jahresbeginn 2026",
+        "Pfeffer (Stanford): Job-Stress kostet US 300 Mrd $/Jahr + 120.000 Tote",
+        "Gallup 2025: 20 % Engagement weltweit · 8,9 Bio $ Verlust = 9 % Welt-BIP"
+      ],
+      "anchors": [
+        "microsoft",
+        "satya nadella",
+        "amy hood",
+        "8750 buyouts",
+        "8.750 buyouts",
+        "freiwilliges buyout",
+        "51 jahren",
+        "51 jahre",
+        "23 april",
+        "earnings call",
+        "900 millionen",
+        "900 mio",
+        "725 milliarden capex",
+        "725 mrd",
+        "alphabet meta",
+        "amazon 16000",
+        "meta 8000",
+        "nike 1400",
+        "100000 tech-stellen",
+        "pfeffer",
+        "300 milliarden stress",
+        "120000 tote",
+        "gallup engagement",
+        "20 prozent engagement",
+        "8,9 billionen",
+        "9 prozent welt bip",
+        "ai first",
+        "buchhaltung"
+      ],
+      "transitionAnchors": [
+        "während wir aufnehmen hat microsoft",
+        "microsoft hat das erste freiwillige buyout",
+        "erste freiwillige buyout seit 51 jahren",
+        "topic eins microsoft",
+        "thema eins microsoft"
+      ]
+    },
+    {
+      "id": "topic-2",
+      "element": 5,
+      "title": "Topic 2 — TBD (Julia-Lead)",
+      "lead": "julia",
+      "durationHint": "6-12 Min",
+      "contextHint": "Julia-Reporter-Slot. Inhalt TBD.",
+      "juliaScript": "TBD",
+      "thesis": "TBD",
+      "bullets": [
+        "TBD"
+      ],
+      "anchors": [
+        "zweites thema",
+        "topic zwei",
+        "topic two"
+      ],
+      "transitionAnchors": [
+        "egal nächstes thema",
+        "nächstes thema",
+        "topic zwei",
+        "thema zwei"
+      ]
+    },
+    {
+      "id": "topic-3",
+      "element": 5,
+      "title": "Topic 3 — AI Layoff Trap",
+      "lead": "stephan",
+      "durationHint": "8-15 Min",
+      "contextHint": "Falk/Tsoukalas arXiv 21.03. — formales Modell, Demand-Externalität, Pigou-Steuer. Mathematik hinter Topic 1.",
+      "juliaScript": "Während Microsoft 8.750 Leute heimschickt, haben zwei Wirtschaftswissenschaftler vor sechs Wochen auf arXiv geliefert: 21. März, Brett Hemenway Falk von der University of Pennsylvania und Gerry Tsoukalas von der Boston University. Titel: The AI Layoff Trap. Nicht Meinung — Mathematik. Ein formales Modell mit einem Theorem, das jeder Vorstand heute Abend lesen sollte. Tut keiner. Sollte er. Stephan, übersetz's ohne VWL-Studium.",
+      "thesis": "Was bei einer Firma logisch ist, ist im Aggregat ökonomischer Selbstmord. Das ist keine Disruption — das ist ein Koordinationsproblem.",
+      "bullets": [
+        "Mechanik: Firma A entlässt → Konsum sinkt → Firmen B/C/D müssen auch automatisieren → Schleife",
+        "Demand-Externalität: einzelne Firma kassiert volle Ersparnis, trägt nur Bruchteil des Marktschadens",
+        "7 Gegenmittel getestet, alle versagen: mehr Wettbewerb VERSCHÄRFT · bessere AI VERSCHÄRFT · Lohnsenkung null · Reskilling null · UBI null · Kapitalsteuer null · Mitarbeiterbeteiligung null",
+        "Einzige Lösung: Pigou-Steuer auf Automatisierung (politisch tot, mathematisch alternativlos)"
+      ],
+      "anchors": [
+        "ai layoff trap",
+        "falk tsoukalas",
+        "falk hemenway",
+        "gerry tsoukalas",
+        "upenn",
+        "university of pennsylvania",
+        "boston university",
+        "arxiv",
+        "21 märz",
+        "21. märz",
+        "sechs wochen",
+        "demand externalität",
+        "demand-externalität",
+        "koordinationsproblem",
+        "ökonomischer selbstmord",
+        "pigou",
+        "pigou steuer",
+        "pigou-steuer",
+        "automatisierung",
+        "automation",
+        "ubi",
+        "kapitalsteuer",
+        "reskilling",
+        "mitarbeiterbeteiligung",
+        "sieben gegenmittel",
+        "7 gegenmittel",
+        "theorem",
+        "vwl studium",
+        "ohne vwl"
+      ],
+      "transitionAnchors": [
+        "während microsoft 8750 leute heimschickt",
+        "topic drei ai layoff",
+        "thema drei ai layoff",
+        "mathematik dahinter",
+        "zwei wirtschaftswissenschaftler"
+      ]
+    },
+    {
+      "id": "wins-fails",
+      "element": 10,
+      "title": "Wins & Fails",
+      "lead": "both",
+      "durationHint": "5-10 Min",
+      "contextHint": "Sieger und Verlierer der Woche. Pattern-Critique > Personen-Demontage.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, Stephan. Sieger und Verlierer der Woche. Wer fängt an?" }
+      ],
+      "winsLosses": [
+        {
+          "who": "stephan",
+          "type": "verlierer",
+          "pick": "Satya Nadella",
+          "reason": "51-Jahre-Tabubruch für 900 Mio Spar-Cash — Buchhaltung verkauft als Strategie."
+        },
+        {
+          "who": "stephan",
+          "type": "sieger",
+          "pick": "Falk + Tsoukalas",
+          "reason": "Mathematik, wo andere LinkedIn-Keynotes halten."
+        },
+        {
+          "who": "julia",
+          "type": "verlierer",
+          "pick": "TBD",
+          "reason": "TBD"
+        },
+        {
+          "who": "julia",
+          "type": "sieger",
+          "pick": "TBD",
+          "reason": "TBD"
+        }
+      ],
+      "anchors": [
+        "wer fängt an",
+        "wer fängt diese woche an",
+        "mein sieger der woche",
+        "mein verlierer der woche",
+        "mein sieger ist",
+        "mein verlierer ist"
+      ],
+      "transitionAnchors": [
+        "sieger und verlierer der woche",
+        "sieger und verlierer",
+        "okay stephan sieger und verlierer"
+      ]
+    },
+    {
+      "id": "outro",
+      "element": 12,
+      "title": "Outro",
+      "lead": "julia",
+      "durationHint": "~15 Sek",
+      "contextHint": "Julia leitet das Outro ein.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen an baierstephan@gmail.com." }
+      ],
+      "anchors": [
+        "schickt eure fragen",
+        "baierstephan",
+        "baierstephan gmail"
+      ],
+      "transitionAnchors": [
+        "wir wollen von euch hören",
+        "wie auch immer wir wollen von euch hören",
+        "schickt eure fragen an"
+      ]
+    },
+    {
+      "id": "close",
+      "element": 13,
+      "title": "Close",
+      "lead": "both",
+      "durationHint": "~25 Sek",
+      "contextHint": "Show-Closer + Brand-Anker + Final Sign-off — drei Verbatim-Linien hintereinander.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube. Wir sind Mittwoch wieder da." },
+        { "speaker": "stephan", "text": "Folge Business ohne Bullshit auf deiner Lieblings-Podcast-Plattform." },
+        { "speaker": "julia", "text": "Danke fürs Zuhören. Wir sind diese Woche wieder da mit einem weiteren Stück Wirtschaft ohne Bullshit." }
+      ],
+      "anchors": [
+        "das wars für heute",
+        "das war's für heute",
+        "abonnier uns auf youtube",
+        "mittwoch wieder da",
+        "lieblings podcast plattform",
+        "deiner lieblings",
+        "weiteres stück wirtschaft",
+        "wirtschaft ohne bullshit"
+      ],
+      "transitionAnchors": [
+        "okay das wars für heute",
+        "folge business ohne bullshit auf",
+        "wir sind diese woche wieder da"
+      ]
+    }
+  ]
+}
