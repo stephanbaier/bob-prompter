@@ -11,7 +11,7 @@
       "durationHint": "~10 Sek",
       "contextHint": "Verbatim-Begrüßung. NIE variieren.",
       "verbatim": [
-        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod, von [Plattform]. Ich bin Julia Jung." },
+        { "speaker": "julia", "text": "Hi zusammen, das ist Business ohne Bullshit, der Pod. Ich bin Julia Jung." },
         { "speaker": "stephan", "text": "Und ich bin Stephan Baier." }
       ],
       "anchors": [
@@ -21,6 +21,40 @@
         "julia jung",
         "und ich bin stephan baier",
         "ich bin stephan baier"
+      ]
+    },
+    {
+      "id": "show-vorstellung",
+      "element": 2,
+      "title": "Show-Vorstellung (nur F006 — Premiere)",
+      "lead": "both",
+      "durationHint": "~60-90 Sek",
+      "contextHint": "Einmalige Premiere-Sektion. Wer wir sind + was der Pod macht. Ab F007 fällt diese Sektion weg.",
+      "verbatim": [
+        { "speaker": "julia", "text": "Bevor wir loslegen — kurz zu uns. Falls du uns hier zum ersten Mal hörst: Ich bin Julia, seit 20 Jahren in der Brand- und Beauty-Welt. Ich rede mit Leuten, die nicht im Quartalsbericht stehen, aber wissen, was wirklich passiert." },
+        { "speaker": "stephan", "text": "Und ich war 12 Jahre Partner einer Top-Beratung. Heute baue ich ein KI-Unternehmen — und ich hab in genug Vorständen gesessen, um zu wissen, wie viel davon Theater ist." },
+        { "speaker": "julia", "text": "Was wir hier machen: jede Woche drei Geschichten — eine aus dem Boardroom, eine aus der Brand- und Konsumwelt, eine aus dem Maschinenraum dazwischen. Mit Zahlen. Mit Trends. Mit Insidern. Und mit dem Recht, klar zu sagen, was Quatsch ist." },
+        { "speaker": "stephan", "text": "Und jetzt gehen wir rein." }
+      ],
+      "anchors": [
+        "bevor wir loslegen kurz zu uns",
+        "falls du uns hier zum ersten mal hörst",
+        "20 jahren in der brand und beauty welt",
+        "12 jahre partner einer top beratung",
+        "ki unternehmen",
+        "in genug vorständen gesessen",
+        "wie viel davon theater",
+        "drei geschichten",
+        "boardroom",
+        "brand und konsumwelt",
+        "maschinenraum dazwischen",
+        "mit dem recht klar zu sagen was quatsch ist",
+        "und jetzt gehen wir rein"
+      ],
+      "transitionAnchors": [
+        "bevor wir loslegen kurz zu uns",
+        "falls du uns hier zum ersten mal hörst",
+        "und jetzt gehen wir rein"
       ]
     },
     {
@@ -138,8 +172,8 @@
       "title": "Topic 2 — Dupe Culture (Julia-Lead)",
       "lead": "julia",
       "durationHint": "8-12 Min",
-      "contextHint": "Konsum-Lüge: Logo sagt nichts über Qualität. Lululemon kapituliert mit Dupe-Tausch-Kampagne, Olaplex prankt Influencer, TikTok-Amateur-Chemiker. LVMH unter Druck, Hermès wächst. Julias Bauer/Beauty-Insider.",
-      "juliaScript": "Heute eine Geschichte aus meiner Welt. Es geht um eine der größten Konsum-Lügen unserer Zeit. Die Lüge geht so: Ein Logo auf dem Etikett sagt irgendwas über Qualität. Es sagt nichts. Und der Beweis liegt gerade in meinem Amazon-Warenkorb — ich habe diese Woche wieder ein Lululemon-Dupe nachbestellt. Lululemon — die Marke mit den teuren Yoga-Leggings — hat selbst kapituliert. Sie haben eine Kampagne gestartet, in der Kunden ihre gefälschten Lululemon-Hosen aus chinesischen Shops einschicken durften und das Original im Tausch bekamen. Die Marke sagt damit selbst: Die Fakes sind nicht mehr peinlich. Sie sind das neue Smart-Shopping-Statement. Olaplex, eine Beauty-Marke, hat sogar Influencer mit Fake-Produkten geprankt — weil die Influencer den Unterschied selbst nicht mehr sehen. Und auf TikTok zerlegen Amateur-Chemiker reihenweise Marken-Inhaltsstoffe in Echtzeit, schneller als jede Anwältin reagieren könnte. Stephan — gleichzeitig kommen die großen Luxus-Häuser wie LVMH gerade massiv unter Druck. Hängt das zusammen?",
+      "contextHint": "Konsum-Lüge: Logo sagt nichts über Qualität. Lululemon 'Dupe Swatch in LA' — Marke selbst kapituliert. Olaplex prankt Influencer. LVMH unter Druck, Hermès wächst. Julias Bauer/Beauty-Insider.",
+      "juliaScript": "Heute eine Geschichte aus der Brand-Welt. Es geht um vielleicht eine der größten Konsum-Lügen unserer Zeit. Die Lüge geht so: Ein Logo auf dem Produkt sagt irgendwas über Qualität. Es sagt nichts. Und der Beweis liegt gerade in meinem Amazon-Warenkorb — ich habe diese Woche wieder ein Lululemon-Dupe nachbestellt. Und frage mich, ob Lululemon — die super hippe Luxus-Yoga-Brand — selbst kapituliert hat. Beim 'Dupe Swatch' in LA konnte jeder seine Billig-Kopien gegen das teure Original tauschen. Die PR-Reichweite durch TikTok-Content vom Event war weitaus mehr wert als die verschenkten Leggings im Einkaufspreis gekostet haben. Und die Marke sagt damit selbst: Die Fakes sind nicht mehr peinlich. Sie sind das neue Smart-Shopping-Statement. Olaplex, eine Beauty-Marke, hat sogar Influencer mit Fake-Produkten geprankt — weil die Influencer den Unterschied selbst nicht mehr sehen. Und auf TikTok zerlegen Amateur-Chemiker reihenweise Marken-Inhaltsstoffe in Echtzeit, schneller als jede Anwältin reagieren könnte. Stephan — gleichzeitig kommen die großen Luxus-Häuser wie LVMH gerade massiv unter Druck. Hängt das zusammen?",
       "thesis": "Wenn der Verbraucher dem Logo nicht mehr glaubt, wird das Marken-Premium ohne Substanz vom Markt selbst bepreist — und LVMH ist gerade die Pilot-Studie.",
       "stats": [
         { "label": "LVMH-Aktie", "value": "12-Monats-Rückgang" },
@@ -149,7 +183,8 @@
         { "label": "Swatch × Audemars Piguet", "value": "Koop viral, Demokratisierung Luxus" }
       ],
       "bullets": [
-        "Lululemon-Kampagne: Fakes einschicken, Original im Tausch — Marke kapituliert vor ihren Dupes",
+        "Lululemon 'Dupe Swatch' in LA: Kunden tauschen Fakes gegen Original — PR-Reichweite via TikTok > Wert der Leggings",
+        "Marke kapituliert vor ihren Dupes — Fakes sind das neue Smart-Shopping-Statement",
         "Olaplex prankt Influencer mit Fake-Produkten — Profis sehen den Unterschied selbst nicht mehr",
         "TikTok-Amateur-Chemiker zerlegen Marken-Inhaltsstoffe schneller als Anwältinnen reagieren",
         "Julia-Insider: Set-Make-up-Artists empfehlen sich Dupes gegenseitig. 1:1 wie Original, halber Preis.",
@@ -160,27 +195,33 @@
         "dupe",
         "dupes",
         "dupe culture",
+        "dupe swatch",
+        "dupe swatch in la",
         "logo ist tot",
         "lululemon",
         "lululemon dupe",
+        "luxus yoga brand",
         "olaplex",
         "amazon warenkorb",
         "tiktok amateur chemiker",
         "lvmh",
         "hermès",
+        "hermes",
         "bain studie",
         "swatch audemars piguet",
         "audemars",
         "yoga leggings",
         "konsum lüge",
+        "konsum lügen unserer zeit",
         "marken inhaltsstoffe",
         "smart shopping statement",
         "make up artists",
         "beauty dupes",
-        "brand development workshop"
+        "brand development workshop",
+        "pr reichweite via tiktok"
       ],
       "transitionAnchors": [
-        "heute eine geschichte aus meiner welt",
+        "heute eine geschichte aus der brand welt",
         "konsum lüge",
         "topic zwei dupe culture",
         "thema zwei das logo ist tot",
@@ -354,17 +395,18 @@
       "durationHint": "~15 Sek",
       "contextHint": "Julia leitet das Outro ein.",
       "verbatim": [
-        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen an baierstephan@gmail.com." }
+        { "speaker": "julia", "text": "Wie auch immer, wir wollen von euch hören. Schickt eure Fragen an pod@business-ohne-bullshit.com." }
       ],
       "anchors": [
         "schickt eure fragen",
-        "baierstephan",
-        "baierstephan gmail"
+        "pod at business ohne bullshit",
+        "business ohne bullshit com",
+        "wir wollen von euch hören"
       ],
       "transitionAnchors": [
         "wir wollen von euch hören",
         "wie auch immer wir wollen von euch hören",
-        "schickt eure fragen an"
+        "schickt eure fragen an pod"
       ]
     },
     {
@@ -372,27 +414,26 @@
       "element": 13,
       "title": "Close",
       "lead": "both",
-      "durationHint": "~25 Sek",
-      "contextHint": "Show-Closer + Brand-Anker + Final Sign-off — 3 Verbatim-Linien.",
+      "durationHint": "~20 Sek",
+      "contextHint": "Show-Closer + Brand-Anker + Final Sign-off — 3 Verbatim-Linien. Letzte Linie endet mit „Peace.\"",
       "verbatim": [
-        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube. Wir sind Mittwoch wieder da." },
+        { "speaker": "julia", "text": "Okay, das war's für heute. Danke fürs Zuhören und abonnier uns auf YouTube." },
         { "speaker": "stephan", "text": "Folge Business ohne Bullshit auf deiner Lieblings-Podcast-Plattform." },
-        { "speaker": "julia", "text": "Danke fürs Zuhören. Wir sind diese Woche wieder da mit einem weiteren Stück Wirtschaft ohne Bullshit." }
+        { "speaker": "julia", "text": "Das ist Business ohne Bullshit. Der Podcast. Peace." }
       ],
       "anchors": [
         "das wars für heute",
         "das war's für heute",
         "abonnier uns auf youtube",
-        "mittwoch wieder da",
         "lieblings podcast plattform",
         "deiner lieblings",
-        "weiteres stück wirtschaft",
-        "wirtschaft ohne bullshit"
+        "das ist business ohne bullshit der podcast peace",
+        "peace"
       ],
       "transitionAnchors": [
         "okay das wars für heute",
         "folge business ohne bullshit auf",
-        "wir sind diese woche wieder da"
+        "das ist business ohne bullshit der podcast"
       ]
     }
   ]
